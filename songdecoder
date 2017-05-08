@@ -1,0 +1,7 @@
+function songDecoder(song){
+  // ...
+  if (song.length < 200) {
+    return song.replace(/(WUB)+/g, " ").trim();
+  }
+}
+console.log(songDecoder(" WUBWEWUBAREWUBWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB"));
