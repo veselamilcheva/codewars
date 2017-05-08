@@ -1,0 +1,23 @@
+function drive(drinks, finished, drive_time) {
+    // Code here
+    var hash = {};
+    var units = 0;
+    for (var i = 0; i < drinks.length; i++ ) {
+        units += drinks[i][0] * drinks[i][1]/1000;  
+
+    }   
+    var newUnits = Number(parseFloat(Math.round(units * 100) / 100).toFixed(2));  
+    var date =  (drive_time > finished) ? '1985/01/01 ' : '1985/01/02 ';
+    var d1 = new Date('1985/01/01 ' + finished + ':52');
+    var d2 = new Date(date + drive_time + ':52');
+    var hours = Math.abs(d2 - d1)/1000/60/60;
+
+    if (hours < newUnits) {
+        return [newUnits, false]
+    } else {
+        return [newUnits, true]
+    }
+  
+}
+
+console.log(drive([[10.5678,100],[15.099,250] ], "20:05", "1:00"));
