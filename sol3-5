@@ -1,0 +1,16 @@
+function solution(number) {
+  var list = [];
+  var total = 0;
+    for (var i = 0; i < number; i++) {
+        list.push(i);
+        if ((list[i] % 3 === 0) || (list[i] % 5 === 0)) {
+            total += list[i];
+           
+        }
+
+        
+    }
+     return total;
+    
+}
+console.log(solution(10));
