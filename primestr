@@ -1,0 +1,12 @@
+function primeString(s) {
+    var testStr;
+    for (var i = 1; i <= s.length / 2; i += 1) {
+        testStr = s.substring(0, i);
+        if (s.replace(new RegExp(testStr, 'g'), '').length === 0) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(primeString('abab'));
