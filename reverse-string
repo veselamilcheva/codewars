@@ -1,0 +1,7 @@
+function reverseWords(str) {
+
+  return str.split("").reverse().join("").split(" ").reverse().join(" ");
+}
+
+
+console.log(reverseWords('This is just an example of how you can write your own'));
