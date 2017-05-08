@@ -1,0 +1,18 @@
+function whichBusToTake(busesColors, goingToSchool) {
+  //coding and coding..
+  
+    var blueBus = null;
+
+    for (var i = 0; i < busesColors.length; i++) {
+       if (busesColors[i] === 'red' && goingToSchool[i] === true) {
+            return i;
+       } 
+       if (busesColors[i] === 'blue' && goingToSchool[i] === true &&  blueBus === null) {
+            blueBus = i;
+       }
+    }
+
+    return blueBus;
+}
+
+console.log(whichBusToTake(["blue","red","blue","blue","red","blue", "red"],[false, false, false, true, false, true]));
